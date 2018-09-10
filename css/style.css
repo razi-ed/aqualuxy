@@ -1,0 +1,113 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+#index-banner {
+  margin-top: 11vh;
+  padding-top: 11vh;
+  min-height: 80vh;
+}
+
+ul.footer-contacts li {
+  display: flex;
+  padding-bottom: .75rem;
+}
+ul.footer-contacts li span {
+  display: flex;
+  color: #fff
+}
+.margin-sm-right {
+  margin-right: 0.5rem;
+}
+.margin-xs-right {
+  margin-right: 0.25rem;
+}
+
+.margin-xl-top {
+  margin-top: 5vh;
+}
+
+a.teal-text:focus.active, a.teal-text:focus  {
+  background-color: rgba(0, 150, 136, 0.3) !important;
+}
+
+.tabs .indicator {
+  background-color: #009688 !important;
+}
+
+.card-cta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#popular {
+  height: 140vh;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  #index-banner {
+    min-height: 82vh;
+  }
+  #popular {
+    height: 145vh;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner {
+    min-height: 82vh;
+  }
+  #index-banner .section {
+    top: 0;
+  }
+  #popular {
+    height: 150vh;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
