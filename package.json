@@ -1,0 +1,24 @@
+{
+  "name": "aqualuxy",
+  "version": "1.0.0",
+  "description": "website for aqualuxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razi-rasheed/aqualuxy.git"
+  },
+  "keywords": [
+    "Aqualuxy",
+    "nodejs"
+  ],
+  "author": "Razi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razi-rasheed/aqualuxy/issues"
+  },
+  "homepage": "https://github.com/razi-rasheed/aqualuxy#readme"
+}
