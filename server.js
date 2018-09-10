@@ -3,8 +3,7 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 
 http.createServer((req, res) => {
-  const headers = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "OPTIONS, POST, GET", "Access-Control-Max-Age": 2592000 }; // 30 days
-  
+  const headers = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "POST, GET", "Access-Control-Max-Age": 2592000 };
   if (req.method === 'POST') {
     let body = '';
     let responseMessage = '';
@@ -30,17 +29,17 @@ http.createServer((req, res) => {
           secure: false, // secure:true for port 465, secure:false for port 587
           auth: {
             user: 'aqualuxy.kannur@gmail.com',
-            pass: 'theerthamKannur'
+            pass: 'xxxxxxtheerthamKxxxxxxx'
           }
         });
         // setup email data with unicode symbols
         const _now = new Date();
         let mailOptions = {
           from: '"Aqualuxy" <aqualuxy.kannur@gmail.com>', // sender address
-          to: 'razi47rasheed@gmail.com',
+          to: 'theerthamknr@gmail.com',
           subject: `Enquiry made at aqualuxy.com || ${_now.toLocaleString('en-GB')}`, // Subject line
-          text: 'following is the details of enquiry made at aqualuxy.com ?', // plain text body
-          html: `<br/>${htmlString}` // html body
+          text: 'following is the details of enquiry made at aqualuxy.com :', // plain text body
+          html: `<p>following is the details of enquiry made at aqualuxy.com :</p><br/>${htmlString}` // html body
         };
 
         // send mail with defined transport object
@@ -58,7 +57,8 @@ http.createServer((req, res) => {
       responseMessage('notEnoughInfo')
     }
     res.writeHead(200, headers)
-    res.end(responseMessage);
+    res.write(responseMessage);
+    res.end();
   });
   }
 
@@ -66,7 +66,7 @@ http.createServer((req, res) => {
   url = url === '/' ? '/index.html' : url;
 
   if(req.method === 'GET') {
-    console.log(url)
+    // console.log(url) use for debug
     // console.log(/.*\.html/gi.exec(url)[0]);
     const fileNameString = /.*\.html/gi.test(url) ? /.*\.html/gi.exec(url)[0] : url;
     fs.readFile(__dirname + fileNameString, (err, data) => {
@@ -76,7 +76,7 @@ http.createServer((req, res) => {
         res.write('Page Not Found');
         res.end();
       } else {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.writeHead(200, { 'Content-Type': 'text/html', ...headers });
         res.write(data);
         res.end();
       }

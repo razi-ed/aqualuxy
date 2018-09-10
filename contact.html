@@ -133,6 +133,7 @@
           <h5 class="white-text">Contact</h5>
           <ul class="footer-contacts">
             <li class="white-text"><i class="material-icons margin-xs-right">mail</i>aqualuxy.kannur@gmail.com</li>
+            <li class="white-text"><i class="material-icons margin-xs-right">mail</i>theerthamknr@gmail.com</li>
             <li class="white-text"><i class="material-icons margin-xs-right">call</i>+91-9526333770</a></li>
             <li class="white-text"><i class="material-icons margin-xs-right">call</i>+91-9525333770</a></li>
           </ul>
@@ -146,7 +147,7 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://res.cloudinary.com/aqualuxykannur/raw/upload/v1536509783/styles/materialize.min.cssjs/materialize.min.js"></script>
+  <script src="https://res.cloudinary.com/aqualuxykannur/raw/upload/v1536509783/js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
       $('.pushpin').pushpin();
@@ -173,7 +174,8 @@
           enquiries
         };
         $.ajax({
-          url: 'http://aqualuxy.com/post',
+          url: 'http://aqualuxy.com/',
+          // url: 'http://127.0.0.1:5500/',
           type: 'POST',
           contentType: 'text/plain',
           xhrFields: {
@@ -199,13 +201,13 @@
     })
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125501438-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125501438-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-125501438-1');
-  </script> -->
+  </script>
   </body>
   </html>
